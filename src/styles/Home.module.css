@@ -1,0 +1,9 @@
+
+.descriptionBackground {
+  background-color: #e9e5e6;
+  background-image: linear-gradient(rgba(233, 229, 230, 0.5), rgba(233, 229, 230, 0.5)), url(https://www.theamsolutions.info/-_-/res/93940d22-eaa9-4ca4-96f0-b7298af36029/images/files/93940d22-eaa9-4ca4-96f0-b7298af36029/179830b6-8661-4870-9f48-0c2ff32c27c1/1490-725/4d222e94cca4ac4476136c49e67b55a7304235e9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: scroll;
+}
