@@ -21,7 +21,7 @@ const NetworkCard = (data: Props) => {
         px: "20px",
         py: "20px",
       }}
-      width={400}
+      width={300}
     >
       <Stack
         flexDirection={"row"}

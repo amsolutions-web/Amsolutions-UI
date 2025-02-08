@@ -69,9 +69,9 @@ const Header = (props: Props) => {
         sx={{
           "&.MuiPaper-root": {
             backgroundColor: "#e9e5e6",
-            backgroundImage: `url("https://www.theamsolutions.info/-_-/res/93940d22-eaa9-4ca4-96f0-b7298af36029/images/files/93940d22-eaa9-4ca4-96f0-b7298af36029/77834bd2-effe-437d-a30c-fc2240bd1e8b/1200-500/3d4add18ea322d61a96de88bce2c667f6b04c5ae")`,
+            backgroundImage: `url("/header.png")`,
             color: "#383838",
-            backgroundSize: "cover",
+            backgroundSize: { sm: "100%, 80%", xs: "100%, 100%" },
             backgroundRepeat: "no-repeat",
             backgroundPosition: "1% 11%",
             backgroundAttachment: "scroll",
@@ -85,7 +85,7 @@ const Header = (props: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" }, mb: 2 }}
           >
             <HiOutlineMenuAlt3 size={28} color="#ffffff" />
           </IconButton>
@@ -93,7 +93,7 @@ const Header = (props: Props) => {
           <Box
             sx={{
               display: { xs: "none", sm: "block" },
-              mt: { md: 11, sm: 4 },
+              mt: { md: 7, sm: 2 },
             }}
           >
             {navItems.map((item) => (

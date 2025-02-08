@@ -15,13 +15,10 @@ const AboutSection = () => {
         }}
         bgcolor={"#f1f1f1"}
       >
-        <Typography variant="h4" fontWeight={"bold"} mb={5}>
-          What We Provide
-        </Typography>
         <Stack
           flexDirection={"row"}
           justifyContent={"center"}
-          gap={3}
+          gap={10}
           flexWrap={"wrap"}
         >
           {Abouts.map((item, index) => (
