@@ -68,13 +68,13 @@ const Header = (props: Props) => {
         elevation={0}
         sx={{
           "&.MuiPaper-root": {
-            backgroundColor: "#e9e5e6",
             backgroundImage: `url("/header.png")`,
             color: "#383838",
-            backgroundSize: { sm: "100%, 80%", xs: "100%, 100%" },
+            backgroundSize: "100%, 100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "1% 11%",
             backgroundAttachment: "scroll",
+            bgcolor: "transparent",
           },
           alignItems: { xs: "end" },
         }}
@@ -106,7 +106,7 @@ const Header = (props: Props) => {
                   textTransform: "uppercase",
                   fontWeight: "bold",
                   "&:hover": {
-                    color: "#1677ff",
+                    color: "black",
                   },
                 }}
               >

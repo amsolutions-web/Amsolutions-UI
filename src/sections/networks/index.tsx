@@ -10,9 +10,9 @@ const NetworksSection = () => {
         sx={{ px: { sm: "80px", xs: "20px" }, py: "20px" }}
         bgcolor={"#f1f1f1"}
       >
-        <Stack flexDirection={"column"} justifyContent={"center"}>
+        <Stack flexDirection={"column"} justifyContent={"center"} gap={4}>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight={"bold"}
             textTransform={"uppercase"}
             textAlign={"center"}
@@ -41,13 +41,13 @@ const NetworksSection = () => {
         </Stack>
         <Stack flexDirection={"column"} justifyContent={"center"}>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight={"bold"}
             textTransform={"uppercase"}
             textAlign={"center"}
             my={4}
           >
-            ongoing projects
+            ongoing testnets
           </Typography>
           <Stack
             gap={3}

@@ -20,6 +20,7 @@ const NetworkCard = (data: Props) => {
         borderRadius: "10px",
         px: "20px",
         py: "20px",
+        transform: "scale(0.9)",
       }}
       width={300}
     >

@@ -10,7 +10,7 @@ const AboutSection = () => {
           flexDirection: "column",
           justifyContent: "center",
           textAlign: "center",
-          pt: { md: "200px", sm: "100px" },
+          pt: { md: "120px", sm: "80px" },
           pb: "25px",
         }}
         bgcolor={"#f1f1f1"}
@@ -18,20 +18,20 @@ const AboutSection = () => {
         <Stack
           flexDirection={"row"}
           justifyContent={"center"}
-          gap={10}
+          gap={{ md: 10, sm: 7 }}
           flexWrap={"wrap"}
+          mt={"40px"}
         >
           {Abouts.map((item, index) => (
             <Stack
               key={index}
               display={"flex"}
               flexDirection={"column"}
-              justifyContent={"center"}
-              alignItems={"center"}
               px={1}
               py={2}
               bgcolor={"#fdfdfd"}
               gap={2}
+              sx={{ transform: "scale(0.9)" }}
             >
               <Image alt="photo" src={item.url} width={340} height={170} />
               <Typography variant="h6" fontWeight={"bold"}>
