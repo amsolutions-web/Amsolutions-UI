@@ -11,18 +11,15 @@ export const Installation: ContentType[] = [
      rm go1.22.4.linux-amd64.tar.gz`,
   },
   {
-    title: "Configure Go",
-    method:
-      "Unless you want to configure in a non-standard way, then set these in the ~/.profile file.",
-    code: `export GOROOT=/usr/local/go
-     export GOPATH=$HOME/go
-     export GO111MODULE=on
-     export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin`,
-  },
-  {
     title: "Install Cosmovisor",
     method: "We will use Cosmovisor v1.0.0 as example here.",
     code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+  },
+    {
+    title: "Install Tools",
+    method: "We will use Cosmovisor v1.0.0 as example here.",
+    code: `sudo apt update && sudo apt upgrade -y 
+    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
   },
 ];
 
