@@ -64,23 +64,6 @@ const Airchains = () => {
           }}
         >
           {/* Header */}
-          <StyledTitle variant="h4">Install Sidecar</StyledTitle>
-
-          {/* Content Mapping */}
-          {Sidecar.map((item, index) => (
-            <ContentSection key={index} item={item} />
-          ))}
-        </Stack>
-      </div>
-      <div id="endpoints">
-        <Stack
-          pb="10px"
-          sx={{
-            px: { xs: "10px" },
-            maxWidth: "800px",
-          }}
-        >
-          {/* Header */}
           <StyledTitle variant="h4"> RPC, API, GRPC Endpoints</StyledTitle>
 
           {/* Content Mapping */}
