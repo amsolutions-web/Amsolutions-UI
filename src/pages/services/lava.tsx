@@ -4,7 +4,6 @@ import {
   Installation,
   Peer,
   Scanner,
-  Sidecar,
   Snapshot,
   Statesync,
 } from "@/constants/services/lava";
