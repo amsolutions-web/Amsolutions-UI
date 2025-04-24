@@ -7,7 +7,7 @@ import {
   Sidecar,
   Snapshot,
   Statesync,
-} from "@/constants/services/airchains";
+} from "@/constants/services/lava";
 import { Box, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 import SidebarLayout from "@/sections/layouts";
