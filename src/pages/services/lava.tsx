@@ -46,7 +46,7 @@ const Airchains = () => {
         >
           {/* Header */}
           <StyledTitle variant="h4">
-            {pathName} Node Installation Guide
+            {pathName} Node Installation
           </StyledTitle>
 
           {/* Content Mapping */}
