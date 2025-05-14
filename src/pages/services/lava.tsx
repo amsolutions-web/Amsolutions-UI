@@ -84,7 +84,7 @@ const Airchains = () => {
           <StyledTitle variant="h4">Blabla</StyledTitle>
 
           {/* Content Mapping */}
-          {Statesync.map((item, index) => (
+          {Blabla.map((item, index) => (
             <ContentSection key={index} item={item} />
           ))}
         </Stack>
