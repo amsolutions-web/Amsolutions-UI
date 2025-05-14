@@ -5,7 +5,7 @@ import {
   Peer,
   Scanner,
   Snapshot,
-  Statesync,
+  Blabla,
 } from "@/constants/services/lava";
 import { Box, Stack } from "@mui/material";
 import { useRouter } from "next/router";
