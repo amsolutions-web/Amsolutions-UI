@@ -72,7 +72,7 @@ const Airchains = () => {
           ))}
         </Stack>
       </div>
-      <div id="blabla">
+      <div id="statesync">
         <Stack
           pb="10px"
           sx={{
@@ -81,10 +81,10 @@ const Airchains = () => {
           }}
         >
           {/* Header */}
-          <StyledTitle variant="h4">Blabla</StyledTitle>
+          <StyledTitle variant="h4">Statesync</StyledTitle>
 
           {/* Content Mapping */}
-          {Blabla.map((item, index) => (
+          {Statesync.map((item, index) => (
             <ContentSection key={index} item={item} />
           ))}
         </Stack>
