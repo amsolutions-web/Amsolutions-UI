@@ -41,8 +41,8 @@ sudo chmod +x /usr/local/bin/lavad`
     code: `
 lavad config chain-id lava-mainnet-1
 lavad config keyring-backend file
-lavad config node tcp://localhost:14457`,
-`lavad init $MONIKER --chain-id lava-mainnet-1`,
+
+lavad init $MONIKER --chain-id lava-mainnet-1`,
   },
     {
     title: "Install Tools",
