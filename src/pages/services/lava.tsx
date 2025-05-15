@@ -63,7 +63,7 @@ const Airchains = () => {
           }}
         >
           {/* Header */}
-          <StyledTitle variant="h4"> Chain Endpoints </StyledTitle>
+          <StyledTitle variant="h4"> RPC, API, GRPC Endpoints</StyledTitle>
 
           {/* Content Mapping */}
           {Endpoints.map((item, index) => (
