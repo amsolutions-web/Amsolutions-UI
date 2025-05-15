@@ -45,7 +45,6 @@ lavad config keyring-backend file`,
         {
     title: "", method: "Set your moniker instead <YOUR_MONIKER> ",
     code: `
-#set your moniker below
 lavad init <YOUR_MONIKER> --chain-id lava-mainnet-1`,
   },
     {
