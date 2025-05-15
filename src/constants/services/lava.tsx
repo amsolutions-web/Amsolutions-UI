@@ -30,6 +30,7 @@ export LAVA_BINARY=lavad
 make build`
 },
     {
+    title: "",
     method: "Copy binaries for systemd and CLI usage",
     code: `
 sudo cp @HOME/lava/build/lavad /usr/local/bin
