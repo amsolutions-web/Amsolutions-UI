@@ -21,16 +21,15 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
     title: "Install binaries and Initialize the node",
     method: "Please check needed version for particular height. Compile lavad",
     code: `version="v5.3.0"
-    cd $HOME
+cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
 git checkout v5.3.0
 export LAVA_BINARY=lavad
-make build`,
-      method: "Copy binaries for systemd option and CLI",
-      code: `sudo cp @HOME/lava/build/lavad /usr/local/bin
-      sudo chmod +x /usr/local/bin/lavad`
+make build
+sudo cp @HOME/lava/build/lavad /usr/local/bin
+sudo chmod +x /usr/local/bin/lavad`
   },
     {
     title: "Install Tools",
