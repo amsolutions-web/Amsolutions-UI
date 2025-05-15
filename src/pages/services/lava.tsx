@@ -54,7 +54,7 @@ const Airchains = () => {
           ))}
         </Stack>
       </div>
-      <div id="sidecar">
+      <div id="endpoints">
         <Stack
           pb="10px"
           sx={{
