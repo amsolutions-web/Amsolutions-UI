@@ -25,9 +25,13 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
-git checkout v5.3.0
+git checkout $version
 export LAVA_BINARY=lavad
-make build
+make build`
+},
+    {
+    method: "Copy binaries for systemd and CLI usage"
+    code: `
 sudo cp @HOME/lava/build/lavad /usr/local/bin
 sudo chmod +x /usr/local/bin/lavad`
   },
