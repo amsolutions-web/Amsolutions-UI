@@ -3,7 +3,6 @@ import {
   Endpoints,
   Installation,
   Peer,
-  Scanner,
   Snapshot,
   Statesync,
 } from "@/constants/services/lava";
