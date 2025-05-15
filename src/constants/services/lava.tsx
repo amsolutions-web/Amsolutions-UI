@@ -2,17 +2,47 @@ import { ContentType } from "@/types";
 
 export const Installation: ContentType[] = [
   {
-    title: "Essential tools",
-    method:
-      "Essential tools for building.",
+    title: "Install essential tools",
+    method: "",
     code: `sudo apt -y update
 sudo apt -y install curl git jq lz4 build-essential
 sudo apt -y upgrade`,
   },
   {
-    title: "Install Cosmovisor",
+    title: "Install GO package",
+    method: "The required version for proper compilation and operation of the node may change. Please stay updated by following the relevant sources.",
+    code: `sudo rm -rf /usr/local/go
+curl -Ls https://go.dev/dl/go1.22.12.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
+eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+`,
+  },
+    {
+    title: "Install binaries and Initialize the node",
+    method: "Please check needed version for particular height. Compile lavad",
+    code: `version="v5.3.0"
+    cd $HOME
+rm -rf lava
+git clone https://github.com/lavanet/lava.git
+cd lava
+git checkout v5.3.0
+export LAVA_BINARY=lavad
+make build`,
+      method: "Copy binaries for systemd option and CLI",
+      code: `sudo cp @HOME/lava/build/lavad /usr/local/bin
+      sudo chmod +x /usr/local/bin/lavad`
+  },
+    {
+    title: "Install Tools",
     method: "We will use Cosmovisor v1.0.0 as example here.",
-    code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+    code: `sudo apt update && sudo apt upgrade -y 
+    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
+  },
+    {
+    title: "Install Tools",
+    method: "We will use Cosmovisor v1.0.0 as example here.",
+    code: `sudo apt update && sudo apt upgrade -y 
+    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
   },
     {
     title: "Install Tools",
