@@ -47,7 +47,7 @@ export const Endpoints: ContentType[] = [
   },
 ];
 
-export const Blabla: ContentType[] = [
+export const Statesync: ContentType[] = [
   {
     title: "Install Go",
     method: "",
