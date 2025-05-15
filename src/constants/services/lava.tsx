@@ -19,7 +19,7 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
   },
     {
     title: "Install binaries and Initialize the node",
-    method: "Please check needed version for particular height. Compile lavad",
+    method: " Compile lavad. Please check needed version for particular height.",
     code: `version="v5.3.0"
 cd $HOME
 rm -rf lava
@@ -35,6 +35,14 @@ make build`
     code: `
 sudo cp @HOME/lava/build/lavad /usr/local/bin
 sudo chmod +x /usr/local/bin/lavad`
+  },
+      {
+    title: "", method: "Initialize the node",
+    code: `
+lavad config chain-id lava-mainnet-1
+lavad config keyring-backend file
+lavad config node tcp://localhost:14457`,
+`lavad init $MONIKER --chain-id lava-mainnet-1`,
   },
     {
     title: "Install Tools",
