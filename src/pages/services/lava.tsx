@@ -139,23 +139,6 @@ const Airchains = () => {
           ))}
         </Stack>
       </div>
-      <div id="scanner">
-        <Stack
-          pb="10px"
-          sx={{
-            px: { xs: "10px" },
-            maxWidth: "800px",
-          }}
-        >
-          {/* Header */}
-          <StyledTitle variant="h4">RPC Scanner</StyledTitle>
-
-          {/* Content Mapping */}
-          {Scanner.map((item, index) => (
-            <ContentSection key={index} item={item} />
-          ))}
-        </Stack>
-      </div>
     </Box>
   );
 };
