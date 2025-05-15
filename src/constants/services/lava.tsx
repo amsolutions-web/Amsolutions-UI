@@ -41,8 +41,8 @@ sudo chmod +x /usr/local/bin/lavad`
     code: `
 lavad config chain-id lava-mainnet-1
 lavad config keyring-backend file
-
-lavad init $MONIKER --chain-id lava-mainnet-1`,
+#set your moniker below
+lavad init <YOUR_MONIKER> --chain-id lava-mainnet-1`,
   },
     {
     title: "Install Tools",
