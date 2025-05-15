@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ['itrocket.net'],
+    domains: ['theamsolutions.info'],
   },
 };
 
