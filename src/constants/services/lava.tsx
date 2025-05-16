@@ -119,20 +119,21 @@ export const Statesync: ContentType[] = [
   {
     title: "",
     method: "",
-    code: `SNAP_RPC: "https://rpc-lava.theamsolutions.info"
-    
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash); \
+    code: `SNAP_RPC="https://rpc-lava.theamsolutions.info"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \\
+BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000)); \\
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash); \\
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.lava/config/config.toml; \
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \\
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\\"$SNAP_RPC,$SNAP_RPC\\"| ; \\
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \\
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\\"$TRUST_HASH\\"|" $HOME/.lava/config/config.toml; \\
 wget -qO $HOME/.lava/config/addrbook.json https://arch.snap-lava.theamsolutions.info/addrbook.json
 `,
   },
+];
   {
     title: "",
     method: "",
