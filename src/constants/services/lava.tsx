@@ -60,8 +60,7 @@ sed -i \
   -e 's/timeout_prevote_delta = ".*"/timeout_prevote_delta = "500ms"/g' \
   -e 's/timeout_propose_delta = ".*"/timeout_propose_delta = "500ms"/g' \
   -e 's/skip_timeout_commit = ".*"/skip_timeout_commit = false/g' \
-  $HOME/.lava/config/config.toml
-`,
+  $HOME/.lava/config/config.toml`,
   },
     {
     title: "Launch node VIA Cosmovisor",
@@ -130,8 +129,7 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \\
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\\"$SNAP_RPC,$SNAP_RPC\\"| ; \\
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \\
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\\"$TRUST_HASH\\"|" $HOME/.lava/config/config.toml; \\
-wget -qO $HOME/.lava/config/addrbook.json https://arch.snap-lava.theamsolutions.info/addrbook.json
-`,
+wget -qO $HOME/.lava/config/addrbook.json https://arch.snap-lava.theamsolutions.info/addrbook.json`,
   },
 ];
   {
