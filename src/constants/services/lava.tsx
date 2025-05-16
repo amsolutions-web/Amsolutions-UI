@@ -48,10 +48,20 @@ lavad config keyring-backend file`,
 lavad init <YOUR_MONIKER> --chain-id lava-mainnet-1`,
   },
     {
-    title: "Install Tools",
-    method: "We will use Cosmovisor v1.0.0 as example here.",
-    code: `sudo apt update && sudo apt upgrade -y 
-    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
+    title: "",
+    method: "Update chain configuration",
+    code: `sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.000000001ulava\"|" $HOME/.lava/config/app.toml
+sed -i \
+  -e 's/timeout_commit = ".*"/timeout_commit = "30s"/g' \
+  -e 's/timeout_propose = ".*"/timeout_propose = "1s"/g' \
+  -e 's/timeout_precommit = ".*"/timeout_precommit = "1s"/g' \
+  -e 's/timeout_precommit_delta = ".*"/timeout_precommit_delta = "500ms"/g' \
+  -e 's/timeout_prevote = ".*"/timeout_prevote = "1s"/g' \
+  -e 's/timeout_prevote_delta = ".*"/timeout_prevote_delta = "500ms"/g' \
+  -e 's/timeout_propose_delta = ".*"/timeout_propose_delta = "500ms"/g' \
+  -e 's/skip_timeout_commit = ".*"/skip_timeout_commit = false/g' \
+  $HOME/.lava/config/config.toml
+`,
   },
     {
     title: "Install Tools",
