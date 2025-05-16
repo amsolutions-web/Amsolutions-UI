@@ -97,6 +97,14 @@ Environment="UNSAFE_SKIP_BACKUP=true"
 WantedBy=multi-user.target
 EOF`,
   },
+    {
+    title: "",
+    method: "Launch Node",
+    code: `sudo systemctl daemon-reload
+sudo systemctl enable lava.service
+sudo systemctl restart lava.service
+`,
+  },
 ];
 
 export const Endpoints: ContentType[] = [
