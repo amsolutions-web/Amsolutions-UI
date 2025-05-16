@@ -107,7 +107,7 @@ sudo systemctl restart lava.service
 ];
 
 export const Endpoints: ContentType[] = [
-    {
+  {
     title: "Launch node VIA Cosmovisor",
     method: "Install Cosmovisor",
     code: `go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0`,
