@@ -31,7 +31,7 @@ make build`
 },
     {
     title: "",
-    method: "Copy binaries for systemd and CLI usage",
+    method: "Move binaries for systemd and CLI usage",
     code: `
 sudo cp @HOME/lava/build/lavad /usr/local/bin
 sudo chmod +x /usr/local/bin/lavad`
@@ -64,16 +64,38 @@ sed -i \
 `,
   },
     {
-    title: "Install Tools",
-    method: "We will use Cosmovisor v1.0.0 as example here.",
-    code: `sudo apt update && sudo apt upgrade -y 
-    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
+    title: "Launch node VIA Cosmovisor",
+    method: "Install Cosmovisor",
+    code: `go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0`,
   },
     {
-    title: "Install Tools",
-    method: "We will use Cosmovisor v1.0.0 as example here.",
-    code: `sudo apt update && sudo apt upgrade -y 
-    sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y`,
+    title: "",
+    method: "Create essential directories",
+    code: `mkdir -p $HOME/.lava/cosmovisor/genesis/bin
+sudo ln -s /usr/local/bin/lavad $HOME/.lava/cosmovisor/genesis/bin/lavad  -f
+sudo ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f`,
+  },
+    {
+    title: "",
+    method: "Create Systemd file",
+    code: `sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
+[Unit]
+Description="Lava Mainnet Cosmovisor"
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which cosmovisor) run start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.lava"
+Environment="DAEMON_NAME=lavad"
+Environment="UNSAFE_SKIP_BACKUP=true"
+
+[Install]
+WantedBy=multi-user.target
+EOF`,
   },
 ];
 
