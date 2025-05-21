@@ -122,7 +122,7 @@ export const Endpoints: ContentType[] = [
     {
     title: "",
     method: "REST",
-    code: `https://rest-lava.theamsolutions.info     x`,
+    code: `https://rest-lava.theamsolutions.info          x`,
   },
     {
     title: "",
