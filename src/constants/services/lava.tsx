@@ -104,18 +104,22 @@ sudo systemctl enable lava.service
 sudo systemctl restart lava.service
 `,
   },
+    {
+    title: "",
+    method: "Check status or logs",
+    code: `sudo systemctl status lava.service 
+sudo journalctl -u lavad -fn 50 -o cat
+`,
+  },
 ];
 export const Endpoints: ContentType[] = [
   {
-    title: "Launch node VIA Cosmovisor",
-    method: "Install Cosmovisor",
-    code: `go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    `,
-  },
-  {
     title: "",
     method: "",
-    code: `RPC: https://rpc-lava.theamsolutions.info`,
+    code: `RPC: https://rpc-lava.theamsolutions.info                                 
+    REST: https://rest-lava.theamsolutions.info                           
+    gRPC: grpc-lava.theamsolutions.info                  `
+    ,
   },
 ];
 export const Statesync: ContentType[] = [
