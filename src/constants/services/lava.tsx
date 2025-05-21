@@ -119,6 +119,7 @@ export const Endpoints: ContentType[] = [
     code: `sudo systemctl status lava.service 
 sudo journalctl -u lavad -fn 50 -o cat
 `,
+  },
   {
     title: "",
     method: "RPC",
