@@ -113,6 +113,12 @@ sudo journalctl -u lavad -fn 50 -o cat
   },
 ];
 export const Endpoints: ContentType[] = [
+    {
+    title: "",
+    method: "Check status or logs",
+    code: `sudo systemctl status lava.service 
+sudo journalctl -u lavad -fn 50 -o cat
+`,
   {
     title: "",
     method: "RPC",
