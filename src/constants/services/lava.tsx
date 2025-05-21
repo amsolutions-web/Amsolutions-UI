@@ -115,11 +115,23 @@ sudo journalctl -u lavad -fn 50 -o cat
 export const Endpoints: ContentType[] = [
   {
     title: "",
-    method: "",
-    code: `RPC: https://rpc-lava.theamsolutions.info                                 
-    REST: https://rest-lava.theamsolutions.info                           
-    gRPC: grpc-lava.theamsolutions.info                  `
-    ,
+    method: "RPC",
+    code: `https://rpc-lava.theamsolutions.info                                                   
+    `,
+  },
+    {
+    title: "",
+    method: "REST",
+    code: `                           https://rest-lava.theamsolutions.info                           
+    gRPC: grpc-lava.theamsolutions.info                  
+    `,
+  },
+    {
+    title: "",
+    method: "gRPC",
+    code: `                                                      
+    grpc-lava.theamsolutions.info                  
+    `,
   },
 ];
 export const Statesync: ContentType[] = [
