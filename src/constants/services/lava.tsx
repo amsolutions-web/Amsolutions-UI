@@ -122,9 +122,7 @@ export const Endpoints: ContentType[] = [
     {
     title: "",
     method: "REST",
-    code: `                           https://rest-lava.theamsolutions.info                           
-    gRPC: grpc-lava.theamsolutions.info                  
-    `,
+    code: `https://rest-lava.theamsolutions.info     x`,
   },
     {
     title: "",
