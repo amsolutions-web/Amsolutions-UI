@@ -116,7 +116,8 @@ export const Endpoints: ContentType[] = [
     {
     title: "",
     method: "Check status or logs",
-    code: `sudo systemctl status lava.service 
+    code: `sudo ln -s /usr/local/bin/lavad $HOME/.lava/cosmovisor/genesis/bin/lavad  -f
+sudo systemctl status lava.service 
 sudo journalctl -u lavad -fn 50 -o cat
 `,
   },
