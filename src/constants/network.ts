@@ -4,8 +4,8 @@ export enum Network {
 }
 
 export const Mainnet: Array<{ alt: string; url: string; title: string; id: string }> = [
-    { alt:'LAVA', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Flava.jpg&w=256&q=75", title: "lava", id:'API INFRA'},
-    { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
+    { alt:'LAVA', url: "https://avatars.githubusercontent.com/u/100386277?s=48&v=4", title: "lava", id:'API INFRA'},
+    { alt:'Archway', url: "https://avatars.githubusercontent.com/u/86496504?s=48&v=4", title: "archway", id:'L1 for smart contracts'},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
