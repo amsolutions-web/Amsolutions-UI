@@ -172,7 +172,6 @@ sudo systemctl restart lavad.service`,
   },
 ];
 export const Snapshot: ContentType[] = [
-
   {
     title: "",
     method: "Stop Lava  node",
@@ -181,24 +180,21 @@ export const Snapshot: ContentType[] = [
   {
     title: "",
     method: "Backup validator state file and empty path for new snapshot",
-    code: `cp $HOME/.lava/data/priv_validator_state.json $HOME/priv_val-state.json.backup
-`,
+    code: `cp $HOME/.lava/data/priv_validator_state.json $HOME/priv_val-state.json.backup`,
   },
   {
     title: "",
     method: "Check latest snapshot and install",
     code: `LAVA_SNAP=$(curl -s https://snapshots.theamsolutions.info | egrep -o ">lava-snap*.*tar" | tr -d ">")
-curl -L https://snapshots.theamsolutions.info/${LAVA_SNAP} | tar xf - -C $HOME/.lava
-`,
+curl -L https://snapshots.theamsolutions.info/$LAVA_SNAP | tar xf - -C $HOME/.lava`,
   },
   {
     title: "",
     method: "Restore validator state file and launch",
     code: `mv $HOME/priv_val-state.json.backup $HOME/.lava/data/priv_validator_state.json 
     sudo systemctl restart lavad.service
-    sudo journalctl -u lavad -fn 50 -o cat
-`,
-  }
+    sudo journalctl -u lavad -fn 50 -o cat`,
+  },
 ];
 
 export const Peer: ContentType[] = [
