@@ -33,8 +33,8 @@ make build`
     title: "",
     method: "Move binaries for systemd and CLI usage",
     code: `
-sudo cp @HOME/lava/build/lavad /usr/local/bin
-sudo chmod +x /usr/local/bin/lavad`
+mkdir -p $HOME/.lava/cosmovisor/genesis/bin
+mv $HOME/lava/build/lavad $HOME/.lava/cosmovisor/genesis/bin/`
   },
       {
     title: "", method: "Initialize the node",
@@ -69,14 +69,14 @@ sed -i \
   },
     {
     title: "",
-    method: "Create essential directories",
-    code: `mkdir -p $HOME/.lava/cosmovisor/genesis/bin
-sudo ln -s /usr/local/bin/lavad $HOME/.lava/cosmovisor/genesis/bin/lavad  -f
+    method: "Create links",
+    code: `
+sudo ln -s $HOME/.lava/cosmovisor/genesis/bin/lavad /usr/local/bin/lavad -f
 sudo ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f`,
   },
     {
     title: "",
-    method: "Create Systemd file",
+    method: "Create Cosmovisor Systemd file",
     code: `sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
 [Unit]
 Description="Lava Mainnet Cosmovisor"
