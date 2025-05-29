@@ -180,7 +180,8 @@ export const Snapshot: ContentType[] = [
   {
     title: "",
     method: "Backup validator state file and empty path for new snapshot",
-    code: `cp $HOME/.lava/data/priv_validator_state.json $HOME/priv_val-state.json.backup`,
+    code: `cp $HOME/.lava/data/priv_validator_state.json $HOME/priv_val-state.json.backup
+rm -rf $HOME/.lava/data `,
   },
   {
     title: "",
