@@ -200,49 +200,31 @@ curl -L https://snapshots.theamsolutions.info/$LAVA_SNAP | tar xf - -C $HOME/.la
 
 export const Peer: ContentType[] = [
   {
-    title: "Install Go",
-    method: "",
-    code: `sudo rm -rvf /usr/local/go/
-     wget https://golang.org/dl/go1.22.4.linux-amd64.tar.gz
-     sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
-     rm go1.22.4.linux-amd64.tar.gz`,
-  },
-  {
-    title: "Configure Go",
-    method: "",
-    code: `export GOROOT=/usr/local/go
-     export GOPATH=$HOME/go
-     export GO111MODULE=on
-     export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin`,
-  },
-  {
-    title: "Install Cosmovisor",
-    method: "",
-    code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+    title: "",
+    method: "Set live peers",
+    code: `peers=$(curl -sS https://rpc-lava.theamsolutions.info/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}' | paste -sd,)
+
+sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.lava/config/config.toml`,
   },
 ];
 
 export const Command: ContentType[] = [
   {
-    title: "Install Go",
+    title: "Node status",
     method: "",
-    code: `sudo rm -rvf /usr/local/go/
-     wget https://golang.org/dl/go1.22.4.linux-amd64.tar.gz
-     sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
-     rm go1.22.4.linux-amd64.tar.gz`,
+    code: `lavad status 2>&1 | jq .SyncInfo`,
   },
   {
-    title: "Configure Go",
-    method: "",
-    code: `export GOROOT=/usr/local/go
-     export GOPATH=$HOME/go
-     export GO111MODULE=on
-     export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin`,
+    title: "Key commands",
+    method: "Add new key",
+    code: `lavad keys add key_name
+`,
   },
   {
-    title: "Install Cosmovisor",
-    method: "",
-    code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+    title: "",
+    method: "Keys list",
+    code: `lavad keys list
+`,
   },
 ];
 
@@ -250,22 +232,6 @@ export const Scanner: ContentType[] = [
   {
     title: "Install Go",
     method: "",
-    code: `sudo rm -rvf /usr/local/go/
-     wget https://golang.org/dl/go1.22.4.linux-amd64.tar.gz
-     sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
-     rm go1.22.4.linux-amd64.tar.gz`,
-  },
-  {
-    title: "Configure Go",
-    method: "",
-    code: `export GOROOT=/usr/local/go
-     export GOPATH=$HOME/go
-     export GO111MODULE=on
-     export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin`,
-  },
-  {
-    title: "Install Cosmovisor",
-    method: "",
-    code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+    code: ``,
   },
 ];
