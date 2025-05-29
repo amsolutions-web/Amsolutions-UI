@@ -47,6 +47,18 @@ lavad config keyring-backend file`,
     code: `
 lavad init <YOUR_MONIKER> --chain-id lava-mainnet-1`,
   },
+        {
+    title: "",
+    method: "Download Genesis",
+    code: `curl -Ls https://raw.githubusercontent.com/lavanet/lava-config/refs/heads/main/mainnet-1/genesis_json/genesis.json > $HOME/.lava/config/genesis.json`,
+  },
+  {
+    title: "",
+    method: "Add live peers",
+    code: `peers=$(curl -sS https://rpc-lava.theamsolutions.info/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}' | paste -sd,)
+
+sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.lava/config/config.toml`,
+  },
     {
     title: "",
     method: "Update chain configuration",
@@ -77,7 +89,7 @@ sudo ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f`,
     {
     title: "",
     method: "Create Cosmovisor Systemd file",
-    code: `sudo tee /etc/systemd/system/lava.service > /dev/null << EOF
+    code: `sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
 [Unit]
 Description="Lava Mainnet Cosmovisor"
 After=network-online.target
@@ -100,27 +112,19 @@ EOF`,
     title: "",
     method: "Launch Node",
     code: `sudo systemctl daemon-reload
-sudo systemctl enable lava.service
-sudo systemctl restart lava.service
+sudo systemctl enable lavad.service
+sudo systemctl restart lavad.service
 `,
   },
     {
     title: "",
     method: "Check status or logs",
-    code: `sudo systemctl status lava.service 
+    code: `sudo systemctl status lavad.service 
 sudo journalctl -u lavad -fn 50 -o cat
 `,
   },
 ];
 export const Endpoints: ContentType[] = [
-    {
-    title: "",
-    method: "Check status or logs",
-    code: `sudo ln -s /usr/local/bin/lavad $HOME/.lava/cosmovisor/genesis/bin/lavad  -f
-sudo systemctl status lava.service 
-sudo journalctl -u lavad -fn 50 -o cat
-`,
-  },
   {
     title: "",
     method: "RPC",
@@ -168,27 +172,33 @@ sudo systemctl restart lavad.service`,
   },
 ];
 export const Snapshot: ContentType[] = [
+
   {
-    title: "Install Go",
-    method: "",
-    code: `sudo rm -rvf /usr/local/go/
-     wget https://golang.org/dl/go1.22.4.linux-amd64.tar.gz
-     sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
-     rm go1.22.4.linux-amd64.tar.gz`,
+    title: "",
+    method: "Stop Lava  node",
+    code: `sudo systemctl stop lavad.service`,
   },
   {
-    title: "Configure Go",
-    method: "",
-    code: `export GOROOT=/usr/local/go
-     export GOPATH=$HOME/go
-     export GO111MODULE=on
-     export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin`,
+    title: "",
+    method: "Backup validator state file and empty path for new snapshot",
+    code: `cp $HOME/.lava/data/priv_validator_state.json $HOME/priv_val-state.json.backup
+`,
   },
   {
-    title: "Install Cosmovisor",
-    method: "",
-    code: `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0`,
+    title: "",
+    method: "Check latest snapshot and install",
+    code: `LAVA_SNAP=$(curl -s https://snapshots.theamsolutions.info | egrep -o ">lava-snap*.*tar" | tr -d ">")
+curl -L https://snapshots.theamsolutions.info/${LAVA_SNAP} | tar xf - -C $HOME/.lava
+`,
   },
+  {
+    title: "",
+    method: "Restore validator state file and launch",
+    code: `mv $HOME/priv_val-state.json.backup $HOME/.lava/data/priv_validator_state.json 
+    sudo systemctl restart lavad.service
+    sudo journalctl -u lavad -fn 50 -o cat
+`,
+  }
 ];
 
 export const Peer: ContentType[] = [
