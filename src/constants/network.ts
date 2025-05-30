@@ -8,7 +8,7 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
     { alt:'Archway', url: "https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.png", title: "archway", id:''},
     { alt:'Swisstronik', url: "https://brandfetch.com/swisstronik.com?view=library&library=default&collection=logos&asset=id_jCRjlcR", title: "swisstronik", id:''},
     { alt:'Penumbra', url: "https://avatars.githubusercontent.com/u/85261160?s=200&v=4", title: "penumbra", id:''},
-    { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
+    { alt:'Side Protocol', url: "https://avatars.githubusercontent.com/u/111408987?s=48&v=4", title: "side", id:''},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
     { alt:'airchains', url: "https://itrocket.net/_next/image/?url=%2Ftestnet%2Fairchains.jpg&w=96&q=75", title: "airchains", id:'junction'},
