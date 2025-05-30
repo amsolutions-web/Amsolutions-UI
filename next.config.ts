@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactStrictMode: true,
+  reactStrictMode: true,,
   images: {
-    domains: ['raw.githubusercontent.com','avatars.githubusercontent.com','assets.brandfetch.io'],
+    domains: ['raw.githubusercontent.com','avatars.githubusercontent.com','itrocket.net',],
   },
 };
 
