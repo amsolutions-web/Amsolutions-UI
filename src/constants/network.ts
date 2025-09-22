@@ -13,6 +13,7 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
     { alt:'Zenrock', url: "https://avatars.githubusercontent.com/u/160767775?s=48&v=4", title: "zenrock", id:''},
     { alt:'UX', url: "https://avatars.githubusercontent.com/u/79238191?s=48&v=4", title: "ux", id:''},
     { alt:'Quicksilver', url: "https://avatars.githubusercontent.com/u/144680245?s=48&v=4", title: "quicksilver", id:''},
+    { alt:'Warden Protocol', url: "https://avatars.githubusercontent.com/u/144680245?s=48&v=4", title: "warden", id:''},
 ]
 
 export const Testnet: Array<{ alt: string; url: string; title: string; id: string }> = [
