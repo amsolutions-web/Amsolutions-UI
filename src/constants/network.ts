@@ -20,7 +20,4 @@ export const Testnet: Array<{ alt: string; url: string; title: string; id: strin
     { alt:'Aztec Network', url: "https://avatars.githubusercontent.com/u/45291733?s=200&v=4", title: "aztec network", id:''},
     { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
     { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
-    { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
-    { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
-    { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
 ]
