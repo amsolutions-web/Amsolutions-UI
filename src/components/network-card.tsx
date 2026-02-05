@@ -60,7 +60,17 @@ const NetworkCard = (data: Props) => {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <CardButton>Staking</CardButton>
+{data.stakingUrl && (
+  <CardButton
+    component="a"
+    href={data.stakingUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Staking
+  </CardButton>
+)}
+
 {data.serviceUrl ? (
   <CardButton
     component="a"
