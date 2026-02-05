@@ -8,8 +8,10 @@ interface Props {
   url: string;
   title: string;
   id: string;
-  serviceUrl?: string; // внешний сайт (опционально)
+  stakingUrl?: string;   // ← ВАЖНО
+  serviceUrl?: string;   // Docs
 }
+
 
 const NetworkCard = (data: Props) => {
   return (
