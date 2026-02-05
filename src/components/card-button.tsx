@@ -1,7 +1,9 @@
 import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+import Button, { ButtonProps } from "@mui/material/Button";
 
-export const CardButton = styled(Button)({
+export const CardButton = styled(
+  (props: ButtonProps) => <Button {...props} />
+)({
   backgroundColor: "#e7e6e8",
   borderRadius: "5px",
   paddingInline: "10px",
