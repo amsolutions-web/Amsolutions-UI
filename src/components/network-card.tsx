@@ -61,12 +61,22 @@ const NetworkCard = (data: Props) => {
         alignItems={"center"}
       >
         <CardButton>Staking</CardButton>
-        <Link
-            href={data.serviceUrl ?? `/services/${data.title}`}
-            target={data.serviceUrl ? "_blank" : undefined}
-            rel={data.serviceUrl ? "noopener noreferrer" : undefined}>
-          <CardButton>Docs</CardButton>
-        </Link>
+{data.serviceUrl ? (
+  <CardButton
+    component="a"
+    href={data.serviceUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Docs
+  </CardButton>
+) : (
+  <Link href={`/services/${data.title}`} passHref>
+    <CardButton component="a">
+      Docs
+    </CardButton>
+  </Link>
+)}
       </Stack>
     </Stack>
   );
