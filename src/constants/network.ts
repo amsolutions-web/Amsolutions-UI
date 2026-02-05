@@ -3,7 +3,7 @@ export enum Network {
     Testnet
 }
 
-export const Mainnet: Array<{ alt: string; url: string; title: string; id: string, stakingUrl?: string, serviceUrl?: string; }> = [
+export const Mainnet: Array<{ alt: string; url: string; title: string; id: string, stakingUrl?: string, serviceUrl?: string }> = [
     { alt:'LAVA', url: "https://avatars.githubusercontent.com/u/100386277?s=48&v=4", title: "lava", id:'', stakingUrl:"https://lavacenter.xyz/lava/staking/lava@valoper179mdmkdejgj0fk68gjvpknm9dv94tmu0zyqmjx"},
     { alt:'Archway', url: "https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.png", title: "archway", id:''},
     { alt:'Swisstronik', url: "https://itrocket.net/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fswisstronic.aeb7c18c.jpg&w=96&q=75", title: "swisstronik", id:''},
@@ -16,7 +16,7 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
     { alt:'Warden Protocol', url: "https://avatars.githubusercontent.com/u/158038121?s=48&v=4", title: "warden", id:''},
 ]
 
-export const Testnet: Array<{ alt: string; url: string; title: string; id: string }> = [
+export const Testnet: Array<{ alt: string; url: string; title: string; id: string, stakingUrl?: string, serviceUrl?: string }> = [
     { alt:'Aztec Network', url: "https://avatars.githubusercontent.com/u/45291733?s=200&v=4", title: "aztec network", id:''},
     { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
     { alt:'blockx', url: "https://itrocket.net", title: "blockx", id:'blockx_19191-1'},
