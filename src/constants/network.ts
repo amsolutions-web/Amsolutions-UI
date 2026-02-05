@@ -3,7 +3,7 @@ export enum Network {
     Testnet
 }
 
-export const Mainnet: Array<{ alt: string; url: string; title: string; id: string, serviceUrl: string; }> = [
+export const Mainnet: Array<{ alt: string; url: string; title: string; id: string, serviceUrl?: string; }> = [
     { alt:'LAVA', url: "https://avatars.githubusercontent.com/u/100386277?s=48&v=4", title: "lava", id:''},
     { alt:'Archway', url: "https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.png", title: "archway", id:'', serviceUrl: "https://docs.archway.io/validators/running-a-node/install"},
     { alt:'Swisstronik', url: "https://itrocket.net/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fswisstronic.aeb7c18c.jpg&w=96&q=75", title: "swisstronik", id:''},
