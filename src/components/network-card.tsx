@@ -8,6 +8,7 @@ interface Props {
   url: string;
   title: string;
   id: string;
+  serviceUrl?: string; // внешний сайт (опционально)
 }
 
 const NetworkCard = (data: Props) => {
@@ -60,8 +61,11 @@ const NetworkCard = (data: Props) => {
         alignItems={"center"}
       >
         <CardButton>Staking</CardButton>
-        <Link href={`/services/${data.title}`}>
-          <CardButton>Service</CardButton>
+        <Link
+            href={data.serviceUrl ?? `/services/${data.title}`}
+            target={data.serviceUrl ? "_blank" : undefined}
+            rel={data.serviceUrl ? "noopener noreferrer" : undefined}>
+          <CardButton>Docs</CardButton>
         </Link>
       </Stack>
     </Stack>
