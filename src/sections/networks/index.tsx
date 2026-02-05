@@ -61,15 +61,17 @@ const NetworksSection = () => {
             justifyContent={"center"}
             flexWrap={"wrap"}
           >
-            {Testnet.map((item, index) => (
-              <NetworkCard
-                key={index}
-                alt={item.alt}
-                url={item.url}
-                title={item.title}
-                id={item.id}
-              />
-            ))}
+{Testnet.map((item, index) => (
+  <NetworkCard
+    key={index}
+    alt={item.alt}
+    url={item.url}
+    title={item.title}
+    id={item.id}
+    stakingUrl={item.stakingUrl}
+    serviceUrl={item.serviceUrl}
+  />
+))}
           </Stack>
         </Stack>
       </Box>
