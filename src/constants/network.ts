@@ -15,8 +15,13 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
      serviceUrl:"https://docs.swisstronik.com/swisstronik-docs",
      stakingUrl:"https://explorer-cosmos.mainnet.swisstronik.com/swisstronik/staking/swtrvaloper1grxluyulsnzp979akmp30afg74jexyz5mlq3g9" },
     
-    { alt:'Penumbra', url: "https://avatars.githubusercontent.com/u/85261160?s=200&v=4", title: "penumbra", id:''},
-    { alt:'Bitway', url: "https://avatars.githubusercontent.com/u/223204087?s=200&v=4", title: "Bitway", id:''},
+    { alt:'Penumbra', url: "https://avatars.githubusercontent.com/u/85261160?s=200&v=4", title: "penumbra", id:'', 
+    serviceUrl: "https://guide.penumbra.zone", 
+    stakingUrl: "https://explorer.penumbra.zone/validator/penumbravalid1z6nw9ute35ajjpvq5yqhspvvvp5ephyd8v5c9wk7hs2zz465esrq56r40w"},
+    
+    { alt:'Bitway', url: "https://avatars.githubusercontent.com/u/223204087?s=200&v=4", title: "Bitway", id:'',
+    serviceUrl: "https://docs.bitway.com", 
+    stakingUrl: "https://ping.pub/bitway/staking/bitwayvaloper1qqrp7yggqv8qxpcgqy0syqc0ruy3jyg5r50qq9gnzcqq5rcwzs23zsdx4hq"},
     { alt:'C4E', url: "https://avatars.githubusercontent.com/u/101329004?s=48&v=4", title: "c4e", id:'c4e'},
     { alt:'Zenrock', url: "https://avatars.githubusercontent.com/u/160767775?s=48&v=4", title: "zenrock", id:''},
     { alt:'UX', url: "https://avatars.githubusercontent.com/u/79238191?s=48&v=4", title: "ux", id:''},
