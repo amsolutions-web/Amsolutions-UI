@@ -57,5 +57,6 @@ export const Testnet: Array<{ alt: string; url: string; title: string; id: strin
     serviceUrl: "https://docs.blockcast.network/main/"
     },
     
-    { alt:'blockx', url: "https://itrocket.net", title: "blockx", id:'blockx_19191-1'},
+    { alt:'Republic', url: "https://avatars.githubusercontent.com/u/234106931?s=200&v=4", title: "republic", id:'',
+    serviceUrl: "https://docs.republicai.io"},
 ]
