@@ -19,7 +19,10 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
      stakingUrl:"https://www.mintscan.io/archway/validators/archwayvaloper18wdwndqaaukkgwn4s0ynw7mdddty6h6vtm2g8p",
     serviceUrl: "https://docs.archway.io/validators/running-a-node/install"},
 
-    { alt:'Zenrock', url: "https://avatars.githubusercontent.com/u/160767775?s=48&v=4", title: "zenrock", id:''},
+    { alt:'Zenrock', url: "https://avatars.githubusercontent.com/u/160767775?s=48&v=4", title: "zenrock", id:'',
+     stakingUrl:"https://zen.app.zenrocklabs.io/staking",
+    serviceUrl: "https://docs.zenrocklabs.io"
+    },
     
     { alt:'Swisstronik', url: "https://itrocket.net/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fswisstronic.aeb7c18c.jpg&w=96&q=75", title: "swisstronik", id:'',
      serviceUrl:"https://docs.swisstronik.com/swisstronik-docs",
