@@ -29,15 +29,33 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
     serviceUrl: "https://guide.penumbra.zone", 
     stakingUrl: "https://explorer.penumbra.zone/validator/penumbravalid1z6nw9ute35ajjpvq5yqhspvvvp5ephyd8v5c9wk7hs2zz465esrq56r40w"},
     
-    { alt:'C4E', url: "https://avatars.githubusercontent.com/u/101329004?s=48&v=4", title: "c4e", id:'c4e'},
+    { alt:'C4E', url: "https://avatars.githubusercontent.com/u/101329004?s=48&v=4", title: "c4e", id:'c4e',
+    serviceUrl: "https://docs.c4e.io",
+    stakingUrl: "https://wallet.c4e.io/staking"},
     
-    { alt:'UX', url: "https://avatars.githubusercontent.com/u/79238191?s=48&v=4", title: "ux", id:''},
-    { alt:'Quicksilver', url: "https://avatars.githubusercontent.com/u/144680245?s=48&v=4", title: "quicksilver", id:''},
+    { alt:'UX', url: "https://avatars.githubusercontent.com/u/79238191?s=48&v=4", title: "ux", id:'',
+    serviceUrl: "https://github.com/umee-network",
+    stakingUrl: "https://ping.pub/umee/staking/umeevaloper1hdeemspqtxaw5pk3ddmtzju3xtk0euj5xddr0c"},
+    
+    { alt:'Quicksilver', url: "https://avatars.githubusercontent.com/u/144680245?s=48&v=4", title: "quicksilver", id:'',
+    serviceUrl: "https://docs.quicksilver.zone",
+    stakingUrl: "https://ping.pub/quicksilver/staking/quickvaloper185hll0d9pydf923ngka3fcwa4xzjm8j6jr53ye"   
+    },
     
 ]
 
 export const Testnet: Array<{ alt: string; url: string; title: string; id: string, stakingUrl?: string, serviceUrl?: string }> = [
-    { alt:'Aztec Network', url: "https://avatars.githubusercontent.com/u/45291733?s=200&v=4", title: "aztec network", id:''},
-    { alt:'blockx', url: "https://itrocket.net/_next/image/?url=%2Fmainnet%2Fblockx.jpg&w=96&q=75", title: "blockx", id:'blockx_19191-1'},
+    
+    { alt:'Aztec Network', url: "https://avatars.githubusercontent.com/u/45291733?s=200&v=4", title: "aztec network", id:'',
+    serviceUrl: "https://docs.aztec.network/operate/operators"
+    },
+    
+    { alt:'Push Chain', url: "https://avatars.githubusercontent.com/u/64157541?s=200&v=4", title: "push chain", id:'',
+    serviceUrl: "https://push.org/docs/"},
+    
+    { alt:'blockcast', url: "https://avatars.githubusercontent.com/u/57363972?s=200&v=4", title: "blockcast", id:'',
+    serviceUrl: "https://docs.blockcast.network/main/"
+    },
+    
     { alt:'blockx', url: "https://itrocket.net", title: "blockx", id:'blockx_19191-1'},
 ]
