@@ -10,26 +10,36 @@ const Footer = () => {
             const Icon = item.icon;
 
             return (
-              <Box
+              <a
                 key={index}
-                component="a"
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition: "0.3s",
-                  cursor: "pointer",
-                  "&:hover": {
-                    transform: "scale(1.15)",
-                  },
-                }}
+                className="
+                  group
+                  flex items-center justify-center
+                  w-14 h-14
+                  rounded-full
+                  bg-neutral-900
+                  border border-neutral-700
+                  transition-all duration-300
+                  hover:scale-110
+                  hover:bg-gradient-to-r
+                  hover:from-blue-500
+                  hover:to-purple-600
+                  active:scale-95
+                "
               >
-                <Icon size={40} />
-              </Box>
+                <Icon
+                  size={28}
+                  className="
+                    text-neutral-300
+                    transition-colors duration-300
+                    group-hover:text-white
+                  "
+                />
+              </a>
             );
           })}
         </Stack>
