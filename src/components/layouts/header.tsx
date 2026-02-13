@@ -31,6 +31,7 @@ const Header = (props: Props) => {
       router.push(`/#${id}`);
     }
   };
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -61,22 +62,27 @@ const Header = (props: Props) => {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
+
   return (
     <>
       <AppBar
         component="nav"
         elevation={0}
         sx={{
-          "&.MuiPaper-root": {
-            backgroundImage: `url("/header.png")`,
-            color: "#383838",
-            backgroundSize: "100%, 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "1% 11%",
-            backgroundAttachment: "scroll",
-            bgcolor: "transparent",
+          position: "relative",
+          overflow: "hidden",
+          background: "transparent",
+
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            inset: 0,
+            backgroundImage: 'url("/header.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            animation: "slowZoom 20s ease-in-out infinite alternate",
+            zIndex: -1,
           },
-          alignItems: { xs: "end" },
         }}
       >
         <Toolbar>
@@ -89,7 +95,9 @@ const Header = (props: Props) => {
           >
             <HiOutlineMenuAlt3 size={28} color="#ffffff" />
           </IconButton>
-          <Box sx={{ flexGrow: 1 }}></Box>
+
+          <Box sx={{ flexGrow: 1 }} />
+
           <Box
             sx={{
               display: { xs: "none", sm: "block" },
@@ -115,26 +123,7 @@ const Header = (props: Props) => {
             ))}
           </Box>
         </Toolbar>
-      <AppBar
-  component="nav"
-  elevation={0}
-  sx={{
-    position: "relative",
-    overflow: "hidden",
-    background: "transparent",
-    
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      inset: 0,
-      backgroundImage: 'url("/header.png")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      animation: "slowZoom 20s ease-in-out infinite alternate",
-      zIndex: -1,
-    },
-  }}
->
+      </AppBar>
 
       <Drawer
         container={container}
@@ -142,11 +131,14 @@ const Header = (props: Props) => {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true,
         }}
         sx={{
           display: { xs: "block", sm: "none" },
-          "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+          },
         }}
       >
         {drawer}
