@@ -50,3 +50,13 @@ a {
   }
 }
 
+@keyframes softBlur {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
+
