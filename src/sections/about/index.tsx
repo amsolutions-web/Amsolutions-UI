@@ -32,7 +32,7 @@ const AboutSection = () => {
               bgcolor={"#fdfdfd"}
               gap={2}
             >
-              <Image alt="photo" src={item.url} width={350} height={200} />
+              <Image alt="photo" src={item.url} width={345} height={210} />
               <Typography variant="h6" fontWeight={"bold"}>
                 {item.subtitle}
               </Typography>
