@@ -31,9 +31,8 @@ const AboutSection = () => {
               py={2}
               bgcolor={"#fdfdfd"}
               gap={2}
-              sx={{ transform: "scale(0.9)" }}
             >
-              <Image alt="photo" src={item.url} width={340} height={170} />
+              <Image alt="photo" src={item.url} width={350} height={200} />
               <Typography variant="h6" fontWeight={"bold"}>
                 {item.subtitle}
               </Typography>
