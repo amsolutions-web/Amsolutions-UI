@@ -10,7 +10,7 @@ const AboutSection = () => {
           flexDirection: "column",
           justifyContent: "center",
           textAlign: "center",
-          pt: { md: "120px", sm: "80px" },
+          pt: { md: "80px", sm: "60px" },
           pb: "25px",
         }}
         bgcolor={"#f1f1f1"}
