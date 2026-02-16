@@ -50,6 +50,7 @@ a {
   }
 }
 
+/* 
 @keyframes blurMotion {
   0% {
     filter: blur(0px);
@@ -58,6 +59,7 @@ a {
     filter: blur(1.5px);
   }
 }
+*/
 
 
 
