@@ -84,8 +84,8 @@ const Header = (props: Props) => {
       zIndex: -1,
 
       animation: `
-        zoomMotion 30s ease-in-out infinite alternate,
-        blurMotion 15s ease-in-out infinite alternate
+        zoomMotion 12s ease-in-out infinite alternate,
+        blurMotion 7s ease-in-out infinite alternate
       `,
     },
   }}
