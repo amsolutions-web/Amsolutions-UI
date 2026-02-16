@@ -5,7 +5,7 @@ import { ContentType } from "@/types";
 
 export const ContentSection = ({ item }: { item: ContentType }) => {
   return (
-    <Stack mt="30px" gap={2}>
+    <Stack mt="25px" gap={2}>
       <Typography variant="h5" fontWeight="bold" color="#0f172a">
         {item.title}
       </Typography>
