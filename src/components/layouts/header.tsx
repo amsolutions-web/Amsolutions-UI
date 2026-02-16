@@ -65,26 +65,32 @@ const Header = (props: Props) => {
 
   return (
     <>
-      <AppBar
-        component="nav"
-        elevation={0}
-        sx={{
-          position: "relative",
-          overflow: "hidden",
-          background: "transparent",
+<AppBar
+  component="nav"
+  elevation={0}
+  sx={{
+    position: "relative",
+    overflow: "hidden",
+    background: "transparent",
 
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            inset: 0,
-            backgroundImage: 'url("/header.png")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            animation: "slowZoom 20s ease-in-out infinite alternate",
-            zIndex: -1,
-          },
-        }}
-      >
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      inset: 0,
+      backgroundImage: 'url("/header.png")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      zIndex: -1,
+
+      animation: `
+        zoomMotion 30s ease-in-out infinite alternate,
+        blurMotion 15s ease-in-out infinite alternate
+      `,
+    },
+  }}
+>
+
         <Toolbar>
           <IconButton
             color="inherit"
