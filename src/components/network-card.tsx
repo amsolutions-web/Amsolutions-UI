@@ -8,8 +8,8 @@ interface Props {
   url: string;
   title: string;
   id: string;
-  stakingUrl?: string;   // ← ВАЖНО
-  serviceUrl?: string;   // Docs
+  stakingUrl?: string;   
+  serviceUrl?: string;  
 }
 
 
