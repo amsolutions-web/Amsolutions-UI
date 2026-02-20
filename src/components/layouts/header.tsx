@@ -137,10 +137,15 @@ const Header = (props: Props) => {
     );
   }
 
-  return (
-    <Button
-      key={item.target}
-      onClick={() => handleScroll(item.target)}
+return (
+  <Button
+    key={item.target || item.label}
+    onClick={() => {
+      if (item.target) {
+        handleScroll(item.target);
+      }
+    }}
+
       sx={{
         color: "#fff",
         fontSize: "20px",
