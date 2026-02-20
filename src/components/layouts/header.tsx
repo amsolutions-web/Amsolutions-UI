@@ -80,7 +80,7 @@ const Header = (props: Props) => {
             backgroundImage: 'url("/header.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
-            animation: "slowZoom 10s ease-in-out infinite alternate",
+            animation: "slowZoom 7s ease-in-out infinite alternate",
             zIndex: -1,
           },
         }}
