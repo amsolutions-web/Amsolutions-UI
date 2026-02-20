@@ -52,7 +52,7 @@ const Header = (props: Props) => {
   sx={{ textAlign: "center" }}
   onClick={() => {
     if (item.href) {
-      window.open(item.href, "_blank");
+      globalThis.window?.open(item.href, "_blank");
     } else if (item.target) {
       handleScroll(item.target);
     }
