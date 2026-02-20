@@ -84,7 +84,7 @@ const handleScroll = (id: string) => {
             backgroundImage: 'url("/header.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
-            animation: "slowZoom 7s ease-in-out infinite alternate",
+            animation: "slowZoom 5s ease-in-out infinite alternate",
             zIndex: -1,
           },
         }}
