@@ -22,10 +22,15 @@ export const SocialIcons: SocialIcon[] = [
     label: "X (Twitter)",
   },
   {
-    icon: ImMail4,
-    href: "latflat@gmail.com",
-    label: "Email",
-  },
+  icon: ImMail4,
+  href: "/email", // ссылка на новую страницу внутри сайта
+  label: "Email",
+},
+//  {
+//    icon: ImMail4,
+//    href: "latflat@gmail.com",
+//    label: "Email",
+//  },
   {
     icon: FaTelegramPlane,
     href: "https://t.me/AlekseyRiga",
