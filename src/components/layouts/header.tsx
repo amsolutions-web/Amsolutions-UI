@@ -23,21 +23,21 @@ const drawerWidth = 240;
 
 const Header = (props: Props) => {
   const router = useRouter();
-
-const handleScroll = (id: string) => {
-  if (id === "blog") {
-    // открываем блог в новой вкладке
-    window.open("https://medium.com/@latflat", "_blank");
-  } else if (id === "home") {
-    router.push("/");
-  } else {
-    router.push(`/#${id}`);
-  }
-};
-
-
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleScroll = (id: string) => {
+    if (id === "blog") {
+      // открываем блог в новой вкладке, только если window доступен
+      if (typeof window !== "undefined") {
+        window.open("https://medium.com/@latflat", "_blank");
+      }
+    } else if (id === "home") {
+      router.push("/");
+    } else {
+      router.push(`/#${id}`);
+    }
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -76,7 +76,6 @@ const handleScroll = (id: string) => {
           position: "relative",
           overflow: "hidden",
           background: "transparent",
-
           "&::before": {
             content: '""',
             position: "absolute",
