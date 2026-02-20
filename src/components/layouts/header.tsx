@@ -110,23 +110,45 @@ const Header = (props: Props) => {
               mt: { md: 7, sm: 2 },
             }}
           >
-            {navItems.map((item) => (
-              <Button
-                key={item.target}
-                onClick={() => handleScroll(item.target)}
-                sx={{
-                  color: "#fff",
-                  fontSize: "20px",
-                  textTransform: "uppercase",
-                  fontWeight: "bold",
-                  "&:hover": {
-                    color: "black",
-                  },
-                }}
-              >
-                {item.label}
-              </Button>
-            ))}
+{navItems.map((item) => {
+  if (item.href) {
+    return (
+      <Button
+        key={item.label}
+        component="a"
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          color: "#fff",
+          fontSize: "20px",
+          textTransform: "uppercase",
+          fontWeight: "bold",
+          "&:hover": { color: "black" },
+        }}
+      >
+        {item.label}
+      </Button>
+    );
+  }
+
+  return (
+    <Button
+      key={item.target}
+      onClick={() => handleScroll(item.target)}
+      sx={{
+        color: "#fff",
+        fontSize: "20px",
+        textTransform: "uppercase",
+        fontWeight: "bold",
+        "&:hover": { color: "black" },
+      }}
+    >
+      {item.label}
+    </Button>
+  );
+})}
+
           </Box>
         </Toolbar>
       </AppBar>
