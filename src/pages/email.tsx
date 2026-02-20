@@ -23,8 +23,8 @@ const EmailPage = () => {
       textAlign="center"
       gap={2}
     >
-      <Typography variant="h4">Email :</Typography>
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h4" sx={{ color: "#113361" }}>Email :</Typography>
+      <Typography variant="h5" sx={{ fontWeight: "bold", color: "#113361" }}>
         {email}
       </Typography>
       <Button
