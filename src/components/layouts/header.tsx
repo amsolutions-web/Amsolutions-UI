@@ -117,8 +117,9 @@ const handleScroll = (id: string) => {
                   fontSize: "20px",
                   textTransform: "uppercase",
                   fontWeight: "bold",
+                  transition: "all 0.7s ease",
                   "&:hover": {
-                    color: "#5E4303",
+                    color: "#CC7244",
                   },
                 }}
               >
