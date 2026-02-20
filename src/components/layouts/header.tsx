@@ -24,13 +24,17 @@ const drawerWidth = 240;
 const Header = (props: Props) => {
   const router = useRouter();
 
-  const handleScroll = (id: string) => {
-    if (id === "home") {
-      router.push("/");
-    } else {
-      router.push(`/#${id}`);
-    }
-  };
+const handleScroll = (id: string) => {
+  if (id === "blog") {
+    // открываем блог в новой вкладке
+    window.open("https://medium.com/@latflat", "_blank");
+  } else if (id === "home") {
+    router.push("/");
+  } else {
+    router.push(`/#${id}`);
+  }
+};
+
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
