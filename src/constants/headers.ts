@@ -3,5 +3,5 @@ export const navItems = [
     { label: "About", target: "about" },
     { label: "Networks", target: "networks" },
     { label: "Contact", target: "contact" },
-    { label: "blog", href: "https://medium.com/@latflat" },
+    { label: "blog", target: "blog" },
   ];
