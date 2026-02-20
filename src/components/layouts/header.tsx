@@ -26,18 +26,19 @@ const Header = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleScroll = (id: string) => {
-    if (id === "blog") {
-      // открываем блог в новой вкладке, только если window доступен
-      if (typeof window !== "undefined") {
-        window.open("https://medium.com/@latflat", "_blank");
-      }
-    } else if (id === "home") {
-      router.push("/");
-    } else {
-      router.push(`/#${id}`);
+const handleScroll = (id: string) => {
+  if (id === "blog") {
+    // открываем блог в новой вкладке, только если window доступен
+    if (typeof globalThis !== "undefined" && globalThis.window) {
+      globalThis.window.open("https://medium.com/@latflat", "_blank");
     }
-  };
+  } else if (id === "home") {
+    router.push("/");
+  } else {
+    router.push(`/#${id}`);
+  }
+};
+
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
