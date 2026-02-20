@@ -48,11 +48,16 @@ const Header = (props: Props) => {
       <List>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: "center" }}
-              onClick={() => handleScroll(item.target)}
-            >
-              <ListItemText primary={item.label} />
+<ListItemButton
+  sx={{ textAlign: "center" }}
+  onClick={() => {
+    if (item.href) {
+      window.open(item.href, "_blank");
+    } else if (item.target) {
+      handleScroll(item.target);
+    }
+  }}
+>
             </ListItemButton>
           </ListItem>
         ))}
