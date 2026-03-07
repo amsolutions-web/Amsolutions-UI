@@ -3,7 +3,7 @@ export const Abouts = [
     url: "/services/1.png",
     subtitle: "EARN WITH US",
     description:
-      "Our validators configured to provide optimal earnings for our delegators.Most attractive commissions which suitable for airdrops rules as additional earn apart of staking!",
+      "Our validators are optimized to deliver the best possible rewards for our delegators. We offer competitive commission rates that also meet common airdrop requirements, giving you the opportunity to earn additional rewards on top of your staking income. We stay closely connected with our delegators and are always available to discuss any questions, ideas, or opportunities. Stake with us and maximize your rewards.",
   },
   {
     url: "/services/2.png",
