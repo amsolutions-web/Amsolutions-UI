@@ -6,7 +6,7 @@ export enum Network {
 export const Mainnet: Array<{ alt: string; url: string; title: string; id: string, stakingUrl?: string, serviceUrl?: string }> = [
     { alt:'Warden Protocol', url: "https://avatars.githubusercontent.com/u/158038121?s=48&v=4", title: "warden", id:'', 
     serviceUrl: "https://docs.wardenprotocol.org", 
-    stakingUrl: "https://app.wardenprotocol.org/earn" },
+    stakingUrl: "https://mainnet.itrocket.net/warden/staking/wardenvaloper1sl2hkm3ka2m677x2nvwqg3xhrrp8zx27k3xg9n" },
 
     { alt:'Bitway', url: "https://avatars.githubusercontent.com/u/223204087?s=200&v=4", title: "Bitway", id:'',
     serviceUrl: "https://docs.bitway.com", 
