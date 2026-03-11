@@ -20,7 +20,7 @@ export const Mainnet: Array<{ alt: string; url: string; title: string; id: strin
     serviceUrl: "https://docs.archway.io/validators/running-a-node/install"},
 
     { alt:'Zenrock', url: "https://avatars.githubusercontent.com/u/160767775?s=48&v=4", title: "zenrock", id:'',
-     stakingUrl:"https://zen.app.zenrocklabs.io/staking",
+     stakingUrl:"https://mainnet.itrocket.net/zenrock/staking/zenvaloper1ukhj4hnv7fv3td7vz9x4xu2fp9g6xqgsly8l26",
     serviceUrl: "https://docs.zenrocklabs.io"
     },
     
