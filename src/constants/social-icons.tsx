@@ -28,7 +28,7 @@ export const SocialIcons: SocialIcon[] = [
 },
 //  {
 //    icon: ImMail4,
-//    href: "latflat@gmail.com",
+//    href: "mannaxriga@gmail.com",
 //    label: "Email",
 //  },
   {
