@@ -4,7 +4,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const EmailPage = () => {
   const [copied, setCopied] = useState(false);
-  const email = "latflat@gmail.com";
+  const email = "mannaxriga@gmail.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
